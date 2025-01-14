@@ -2,17 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Node : MonoBehaviour
+public class Node
 {
-    // Start is called before the first frame update
-    void Start()
+    public List<Edge> edgeList = new List<Edge>();
+    public Node path = null;
+    GameObject id;
+
+    public float f, g, h;
+    public Node cameFrom;
+
+    public Node(GameObject i)
     {
-        
+        id = i;
+        path = null;
     }
 
-    // Update is called once per frame
-    void Update()
+    public GameObject getId()
     {
-        
+        return id;
     }
+
 }
